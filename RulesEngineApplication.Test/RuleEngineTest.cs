@@ -28,23 +28,32 @@ namespace RulesEngineApplication.Test
         [Test]
         public void paymentForMembership_Test()
         {
-
+            var result = _ruleEngine.paymentForMembership();
+            Assert.IsTrue(result);
         }
         [Test]
         public void paymentForPhysicalProduct_Test()
         {
+            var result = _ruleEngine.paymentForPhysicalProduct();
+            Assert.IsTrue(result);
         }
         [Test]
         public void paymentForPhysicalProductOrBook_Test()
         {
+            var result = _ruleEngine.paymentForPhysicalProductOrBook();
+            Assert.IsTrue(result);
         }
         [Test]
         public void paymentForUpgradingMembership_Test()
         {
+            var result = _ruleEngine.paymentForUpgradingMembership();
+            Assert.IsTrue(result);
         }
         [Test]
         public void paymentForVideoLearning_Test()
         {
+            var result = _ruleEngine.paymentForVideoLearning();
+            Assert.IsTrue(result);
         }
     }
 }
