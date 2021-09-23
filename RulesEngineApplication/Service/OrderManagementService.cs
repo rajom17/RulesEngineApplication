@@ -35,13 +35,17 @@ namespace RulesEngineApplication.Service
         }
 
         public bool addFirstAidvideo()
-        {
-            throw new NotImplementedException();
+        { 
+            //implementation need to be done
+
+            return true;
         }
 
         public bool commissionPaymentToAgent()
         {
-            throw new NotImplementedException();
+            //implementation need to be done
+
+            return true;
         }
     }
 }

@@ -13,33 +13,43 @@ namespace RulesEngineApplication
         public bool paymentForBook()
         {
             var result = false;
-            result = _omService.generatePackingSlipForShipping();
+            result = _omService.duplicatePackingSlipForRoyaltyDepartment();
             return result;
         }
 
         public bool paymentForMembership()
         {
-            throw new NotImplementedException();
+            var result = false;
+            result = _omService.activateMembership();
+            return result;
         }
 
         public bool paymentForPhysicalProduct()
         {
-            throw new NotImplementedException();
+            var result = false;
+            result = _omService.generatePackingSlipForShipping();
+            return result;
         }
 
         public bool paymentForPhysicalProductOrBook()
         {
-            throw new NotImplementedException();
+            var result = false;
+            result = _omService.commissionPaymentToAgent();
+            return result;
         }
 
         public bool paymentForUpgradingMembership()
         {
-            throw new NotImplementedException();
+            var result = false;
+            result = _omService.upgradeMembership();
+            return result;
         }
 
         public bool paymentForVideoLearning()
         {
-            throw new NotImplementedException();
+            var result = false;
+            result = _omService.addFirstAidvideo();
+            return result;
         }
     }
 }
