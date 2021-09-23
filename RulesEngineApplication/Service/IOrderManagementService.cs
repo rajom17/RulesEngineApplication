@@ -7,5 +7,10 @@ namespace RulesEngineApplication.Service
     public interface IOrderManagementService
     {
         bool generatePackingSlipForShipping();
+        bool duplicatePackingSlipForRoyaltyDepartment();
+        bool activateMembership();
+        bool upgradeMembership();
+        bool addFirstAidvideo();
+        bool commissionPaymentToAgent();
     }
 }

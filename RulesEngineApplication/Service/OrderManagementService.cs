@@ -12,5 +12,36 @@ namespace RulesEngineApplication.Service
 
             return true;
         }
+
+        public bool duplicatePackingSlipForRoyaltyDepartment()
+        {
+            //implementation need to be done
+
+            return true;
+        }
+
+        public bool activateMembership()
+        {
+            //implementation need to be done
+
+            return true;
+        }
+
+        public bool upgradeMembership()
+        {
+            //implementation need to be done
+
+            return true;
+        }
+
+        public bool addFirstAidvideo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool commissionPaymentToAgent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
