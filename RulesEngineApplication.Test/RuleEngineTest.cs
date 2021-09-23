@@ -6,7 +6,7 @@ namespace RulesEngineApplication.Test
     public class RuleEngineTest
     {
        public RuleEngine _ruleEngine;
-
+        
         public RuleEngineTest()
         {
 
@@ -21,7 +21,7 @@ namespace RulesEngineApplication.Test
         [Test]
         public void paymentForBook_Test()
         {
-            
+            // Time was less so created only positive senarios
             var result =_ruleEngine.paymentForBook();
             Assert.IsTrue(result);
         }
