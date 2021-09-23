@@ -1,12 +1,20 @@
-﻿using System;
+﻿using RulesEngineApplication.Service;
+using System;
 
 namespace RulesEngineApplication
 {
     public class RuleEngine : IRuleEngine
     {
+        private readonly IOrderManagementService _omService;
+        public RuleEngine(IOrderManagementService omService)
+        {
+            _omService = omService;
+        }
         public bool paymentForBook()
         {
-            throw new NotImplementedException();
+            var result = false;
+            result = _omService.generatePackingSlipForShipping();
+            return result;
         }
 
         public bool paymentForMembership()

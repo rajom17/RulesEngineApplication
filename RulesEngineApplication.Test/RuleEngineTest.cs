@@ -1,38 +1,49 @@
 using NUnit.Framework;
+using RulesEngineApplication.Service;
 
 namespace RulesEngineApplication.Test
 {
     public class RuleEngineTest
     {
-        private readonly RuleEngine _ruleEngine;
+       public RuleEngine _ruleEngine;
 
-        public RuleEngineTest(RuleEngine ruleEngine)
-        {
-            _ruleEngine = ruleEngine;
-        }
-        [Test]
-        public void paymentForBookTest()
-        {
-        }
-        [Test]
-        public void paymentForMembershipTest()
+        public RuleEngineTest()
         {
 
         }
+        [SetUp]
+        public void SetUp()
+        {
+            OrderManagementService omService = new OrderManagementService();
+            _ruleEngine = new RuleEngine(omService);
+        }
+
         [Test]
-        public void paymentForPhysicalProductTest()
+        public void paymentForBook_Test()
+        {
+            
+            var result =_ruleEngine.paymentForBook();
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void paymentForMembership_Test()
+        {
+
+        }
+        [Test]
+        public void paymentForPhysicalProduct_Test()
         {
         }
         [Test]
-        public void paymentForPhysicalProductOrBookTest()
+        public void paymentForPhysicalProductOrBook_Test()
         {
         }
         [Test]
-        public void paymentForUpgradingMembershipTest()
+        public void paymentForUpgradingMembership_Test()
         {
         }
         [Test]
-        public void paymentForVideoLearningTest()
+        public void paymentForVideoLearning_Test()
         {
         }
     }
